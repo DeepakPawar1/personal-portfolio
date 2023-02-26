@@ -5,7 +5,10 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
-
+import SvgIcon from "./SvgIcon";
+import {SquareSvg} from "./SvgIcon";
+import {useState} from 'react';
+import { FileX } from "react-bootstrap-icons";
 
 function Skills  () {
     const responsive = {
@@ -27,7 +30,9 @@ function Skills  () {
           items: 1
         }
       };
-
+      const [isShown, setIsShown] = useState(false);
+      const [isShownBackend, setIsShownBackend] = useState(false);
+      const [isShownDevOps,setIsShownDevops] = useState(false);
     return (<section>   
         <Container>
         <Row>
@@ -36,19 +41,21 @@ function Skills  () {
                 <h2>
                     Skills
                 </h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  </p>
-            <Carousel responsive={responsive} infiite={true} className="skill-slider">
-                <div className="item">
-                    <img src={meter1} alt="React Logo"/>
-                    <h5>Web Development</h5>
+                <p>Following is the skillset that I posses in my arsenal. I believe there is always an area for IMPROVEMENT.</p>
+            <Carousel responsive={responsive} infiite={true} className="skill-slider" >
+            <div className="item" onMouseEnter={() => setIsShownBackend(true)}  onMouseLeave={() => setIsShownBackend(false)}>
+                    {isShownBackend ? <SquareSvg isopen={isShownBackend} skills={["Python","Django","FastApi"]}/> : <SvgIcon percentage="80"/>}
+                    <h5>Backend</h5>
                 </div>
-                <div className="item">
-                    <img src={meter2} alt="React Logo"/>
-                    <h5>Brand Identify</h5>
+                
+                <div className="item"  onMouseEnter={() => setIsShown(true)}  onMouseLeave={() => setIsShown(false)}>
+                    {isShown ? <SquareSvg isopen={isShown} skills={["React","Javascript","HTML"]}/> : <SvgIcon percentage="70"/>}
+
+                    <h5>Frontend</h5>
                 </div>
-                <div className="item">
-                    <img src={meter3} alt="React Logo"/>
-                    <h5>Logo Design</h5>
+                <div className="item" onMouseEnter={() => setIsShownDevops(true)}  onMouseLeave={() => setIsShownDevops(false)}>
+                    {isShownDevOps ? <SquareSvg isopen={isShownDevOps} skills={["Docker","Kubernetes","Jenkins"]}/> : <SvgIcon percentage="60"/>}
+                    <h5>DevOps</h5>
                 </div>
             </Carousel>
             </div>

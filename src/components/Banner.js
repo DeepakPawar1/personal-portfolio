@@ -46,14 +46,16 @@ return (
                 <Col xs={12} md={6} xl={7}>
 
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{`Hi I'm Deepak Pawar `}<span className="wrap">{text}</span></h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
-                    <button onClick={()=> console.log('connect')}>
+                    <h1>{`Hi I'm Deepak Pawar `}
+                    {/* <span className="wrap">{text}</span> */}
+                    </h1>
+                    <p>I am a (so called) <b>Computer Engineer</b> graduated in 2018. I have had a chance to work with multiple firms since then. I have been extensively working on Backend , Frontend and DevOps as per the requirements of the project.</p><p> I have worked as Python Developer for most of my working experience and I have levelled up as Frontend developer after working on series of personal projects, this portfolio website being one of them.  </p>
+                    <button onClick={()=> console.log('connect')} style={{backgroundColor:"Black"}}>
                             Lets Connect <ArrowRightCircle size={25}/>
                     </button>
                 </Col>
                 <Col xs={12} md={6} xl={5}> 
-                <img src={headerImg} alt="Header Img"/>
+                <img src={headerImg} alt="Header Img" style={{maxWidth: "100%",height: "auto"}} id="fadeshow1"/>
                 
                 </Col>
             </Row>

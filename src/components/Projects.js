@@ -6,7 +6,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png"
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-
+import SvgIcon from "./SvgIcon";
 function Projects () {
     const projects = [
     {
@@ -14,23 +14,26 @@ function Projects () {
         description:"Design & Development",
         imageUrl: projImg1,
      },
-     {
-        title: "Business Startup",
-        description:"Design & Development",
-        imageUrl: projImg2,
-     },
-     {
-        title: "Business Startup",
-        description:"Design & Development",
-        imageUrl: projImg3,
-     },
+    //  {
+    //     title: "Business Startup",
+    //     description:"Design & Development",
+    //     imageUrl: projImg2,
+    //  },
+    //  {
+    //     title: "Business Startup",
+    //     description:"Design & Development",
+    //     imageUrl: projImg3,
+    //  },
     ]
+
+    
+
     return (<section className="project" id="project">
 <Container>
     <Row>
         <Col>
         <h2>Projects</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  </p>
+        <p style={{margin: "auto" }}>My work on professional projects is mostly in backend. Following are the details.</p>
         <Tab.Container id="projects-tabs" defaultActiveKey="first">
         <Nav variant="pills"  defaultActiveKey="/home" className="flex-row">
             <Nav.Item>
@@ -45,7 +48,8 @@ function Projects () {
           </Nav>
           <Tab.Content>
               <Tab.Pane eventKey="first">
-                  <Row>
+               2018-2020 ElasticRUN 
+                  <Row >
                       {
                           projects.map((project,index)=>{
                               return(
@@ -59,10 +63,34 @@ function Projects () {
                   </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                  LoremIpsum
+                  2020-2021 Freelancing
+                  <Row >
+                      {
+                          projects.map((project,index)=>{
+                              return(
+                                  <ProjectCard 
+                                  key={index} 
+                                  {...project}
+                                  />
+                              )
+                          })
+                      }
+                  </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-                 Lorem Ipsum       
+                 2020-2021 HashedIN by DELOITTE
+                  <Row >
+                      {
+                          projects.map((project,index)=>{
+                              return(
+                                  <ProjectCard 
+                                  key={index} 
+                                  {...project}
+                                  />
+                              )
+                          })
+                      }
+                  </Row>     
               </Tab.Pane>
           </Tab.Content>
           </Tab.Container>
