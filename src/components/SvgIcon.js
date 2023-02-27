@@ -27,7 +27,7 @@ const pathVariants = {
 
 function SvgIcon ({percentage}) {
     const str = `${percentage},100`
-    return (<svg viewBox="0 0 36 36" width="150" height="160" >
+    return (<svg viewBox="0 0 36 36" width="150" height="160" className="skilllSvg">
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%"   stopColor="#AA367C"/>
           <stop offset="100%" stopColor="#4A2FBD"/>
@@ -71,7 +71,7 @@ function SvgIcon ({percentage}) {
         })
         return (
     
-    <motion.svg width="150" height="160" variants={svgVariants} initial="hidden" animate="visible">
+    <motion.svg width="150" height="160" className="squareSvg" variants={svgVariants} initial="hidden" animate="visible">
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%"   stopColor="#AA367C"/>
           <stop offset="100%" stopColor="#4A2FBD"/>
@@ -85,7 +85,26 @@ function SvgIcon ({percentage}) {
         )
     }
 
+export const LmkJ =() =>{
+//     <div className="abc">
+//     <p>
+//         2018
+//     </p>
+//     <span className="bcd"></span>
+//     <p>
+//         2023
+//     </p>
+// </div>
+    return (
 
+<div id="line">
+    <div id="gray"></div>
+    <div id="red"></div>
+    <div id="black"></div>
+</div>
+
+    )
+}
     
     
     export default SvgIcon;

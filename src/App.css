@@ -148,13 +148,81 @@ display:flex;
 flex-direction: row;
 justify-content: center;
 margin-top: 20px;
+gap: 2em;;
 
 }
 @media screen and (max-width: 600px){
   .cardDiv{
      flex-direction: column;
+     gap:1em
   }
 }
+/* .abc{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.bcd{
+  height: 5px;
+        width: 1555px;
+        background-color: #FECC01;
+        border-radius: 100px;
+        margin: auto;
+} */
+div#line {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+div#line > div {
+  height: 100%;
+  float: left;
+}
+
+div#gray {
+  width: 30%;
+  background-color: gray;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px
+}
+
+div#red {
+  width: 30%;
+  background-color: red;
+}
+
+div#black {
+  width: 40%;
+  background-color: yellow;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px
+}
+.projectCardImg{
+  width:400px;
+  height:400px;
+}
+/* .bcd:before {
+  content:'';
+  background:red;
+  width:30%;
+  height:2px;
+  position:absolute;    
+}
+.line {
+  padding: 10px;
+  background:gray;
+  position:relative;
+  height:2px;
+}
+.line:before {
+  content:'';
+  background:red;
+  width:30%;
+  height:2px;
+  position:absolute;    
+} */
 
 .grow img { 
   transition: all .2s ease-in-out; 
@@ -292,10 +360,10 @@ margin-top: 20px;
     position: relative;
   }
 
-  .skill-slider .item img {
+  /* .skill-slider .item img {
     width: 50%;
-    margin: 0 auto 15px auto;
-  }
+    margin: 0 auto 15px 100px;
+  } */
 
   .background-image-left{
     top: 28%;
@@ -311,6 +379,7 @@ margin-top: 20px;
     width: 35%;
     z-index: -4;
   }
+
 
 /*Project*/
 .project{
@@ -408,6 +477,8 @@ border-radius: 55px 0px 0px 55px;
 .proj-txtx{
   position: absolute;
   text-align: center;
+  background-color: black;
+  border-radius: 10px;
   top: 65%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -433,7 +504,9 @@ border-radius: 55px 0px 0px 55px;
 }
 
 
-
+.Carousel{
+  margin:20px;
+}
 .App {
   text-align: center;
 }
@@ -472,3 +545,40 @@ border-radius: 55px 0px 0px 55px;
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 800px) {
+   .abracadabra {
+      /* display: flex;
+      flex-direction: column;
+      justify-content: center; */
+      /* display: block; */
+       width: 90% !important;
+      /*margin: 0 0 0 0; */
+  } 
+  .abracadabra .item > a{
+    /* /* background-color: rgb(5, 5, 5) !important; */
+    /* width:370px !important; */ 
+    font-size: 12px !important;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 437px) {
+.react-multiple-carousel__arrow--right {
+  margin-right: -20px !important
+}
+.skill-bx{
+  padding:60px 0px !important;
+}
+.skilllSvg{
+  width:120px;
+  height:130px;
+}
+.squareSvg{
+  width:120px;
+  height:130px;
+}
+}
+
+
+/*SkillSVG in svgIcon*/

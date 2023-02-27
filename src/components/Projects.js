@@ -6,25 +6,30 @@ import colorSharp2 from "../assets/img/color-sharp2.png"
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import SvgIcon from "./SvgIcon";
+import porjImg4 from "../assets/img/deliveryserv.png";
+import Carousel from 'react-bootstrap/Carousel'
 function Projects () {
-    const projects = [
+    const projectErun = [
     {
         title: "Business Startup",
+        description:"Backend work in python with Frappe/Erpnext framework.",
+        imageUrl: porjImg4,
+        projectItems: ["Developed and maintained payments system that used to deploy live payments to field workers based on various calculation and location dependencies integrated with Banks payment apis.","Developed ticketing system dispatching dispatching for incoming payment requests  using Redis in memory database and Python.","Mostly  worked with JavaScript as frontend."]
+     }]
+     const projectFreelance = [{
+        title: "Freelancer",
+        description:"Backend Projects for Inventory Management.",
+        imageUrl: projImg2,
+        projectItems: ["Developed a dashboard for handling stocks within the system using JavaScript.","Developed reports for data about remaining stocks and future requirements using Pandas library .","Providing the user the ability to punch future orders and edit future orders whereas not allowing to edit previous date data."]
+     }]
+     const projectDeloitte=[
+     {
+        title: "Business Startup",
         description:"Design & Development",
-        imageUrl: projImg1,
-     },
-    //  {
-    //     title: "Business Startup",
-    //     description:"Design & Development",
-    //     imageUrl: projImg2,
-    //  },
-    //  {
-    //     title: "Business Startup",
-    //     description:"Design & Development",
-    //     imageUrl: projImg3,
-    //  },
-    ]
+        imageUrl: projImg3,
+        projectItems: ["Worked on Python project where Cloud platform was to be migrated for HP.","Handled backend apis for access controls.","Developed backed in django for a product which dealt with providing loan to people.","Scraping of data from linkedin and generating models for user based on their credit history."]
+     }]
+    
 
     
 
@@ -35,15 +40,22 @@ function Projects () {
         <h2>Projects</h2>
         <p style={{margin: "auto" }}>My work on professional projects is mostly in backend. Following are the details.</p>
         <Tab.Container id="projects-tabs" defaultActiveKey="first">
-        <Nav variant="pills"  defaultActiveKey="/home" className="flex-row">
-            <Nav.Item>
-              <Nav.Link eventKey="first">Tab 1</Nav.Link>
+        <Nav variant="pills"  defaultActiveKey="/home" className="abracadabra">
+            <Nav.Item className="item">
+              <Nav.Link eventKey="first"><div>ElasticRUN Pune</div>
+             
+              </Nav.Link>
+              
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="second">Tab 2</Nav.Link>
+            <Nav.Item className="item">
+              <Nav.Link eventKey="second"><div>FreeLancing</div>
+             
+              
+              </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="third">Tab 3</Nav.Link>
+            <Nav.Item className="item">
+              <Nav.Link eventKey="third"><div>HashedIN by DELOITTE</div>
+              </Nav.Link>
             </Nav.Item>
           </Nav>
           <Tab.Content>
@@ -51,7 +63,7 @@ function Projects () {
                2018-2020 ElasticRUN 
                   <Row >
                       {
-                          projects.map((project,index)=>{
+                          projectErun.map((project,index)=>{
                               return(
                                   <ProjectCard 
                                   key={index} 
@@ -66,7 +78,7 @@ function Projects () {
                   2020-2021 Freelancing
                   <Row >
                       {
-                          projects.map((project,index)=>{
+                          projectFreelance.map((project,index)=>{
                               return(
                                   <ProjectCard 
                                   key={index} 
@@ -78,10 +90,10 @@ function Projects () {
                   </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-                 2020-2021 HashedIN by DELOITTE
+                 2021-2023 HashedIN by DELOITTE
                   <Row >
                       {
-                          projects.map((project,index)=>{
+                          projectDeloitte.map((project,index)=>{
                               return(
                                   <ProjectCard 
                                   key={index} 
