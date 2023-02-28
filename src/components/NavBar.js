@@ -9,6 +9,7 @@ import {DevSvg} from "./SvgIcon";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import whatsapp from '../assets/img/whatsapp.svg';
 
 
 function NavBar(){
@@ -52,9 +53,9 @@ function NavBar(){
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a className="grow" href="#linkedin"><img src={navIcon1} alt="React Logo"/></a>
-                    <a className="grow" href="#fb"><img src={navIcon2} alt="React Logo"/></a>
-                    <a className="grow" href="#insta"><img src={navIcon3} alt="React Logo"/></a> 
+                    <a className="grow" href="https://api.whatsapp.com/send?phone=8180935220"><img src={whatsapp} alt="React Logo"/></a>
+                    <a className="grow" href="https://www.linkedin.com/in/deepak-pawar-566192140/"><img src={navIcon1} alt="React Logo"/></a>
+                    {/* <a className="grow" href="#insta"><img src={navIcon3} alt="React Logo"/></a>  */}
                 
                 
                 </div>

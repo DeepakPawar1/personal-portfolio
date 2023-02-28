@@ -38,7 +38,7 @@ function Projects () {
     <Row>
         <Col>
         <h2>Projects</h2>
-        <p style={{margin: "auto" }}>My work on professional projects is mostly in backend. Following are the details.</p>
+        <p style={{marginLeft: "30px",textAlign:"left" }}>My work on professional projects is mostly in backend. Following are the details.</p>
         <Tab.Container id="projects-tabs" defaultActiveKey="first">
         <Nav variant="pills"  defaultActiveKey="/home" className="projectsClass">
             <Nav.Item className="item">

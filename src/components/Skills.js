@@ -54,28 +54,14 @@ function Skills  () {
                 setIsShownBackend(false)
                 }}
               afterChange={async (previousSlide, { currentSlide, onMove }) => {
-                await sleep(2000)
+                await sleep(1000)
                 setIsShown(true)
                 setIsShownDevops(true)
                 setIsShownBackend(true)
-                // if (currentSlide ===1){
-                //   await sleep(2000)
-                //   setIsShown(true)
-                // }
-                // if (currentSlide ===2){
-                //   await sleep(2000)
-                //   setIsShownDevops(true)
-                // }
-                // if (currentSlide ===0){
-                //   await sleep(2000)
-                //   setIsShownBackend(true)
-                // }
               console.log(previousSlide, currentSlide,"afterchange");
 
             }}
-            autoPlaySpeed={8000}
-            customLeftArrow={""}
-            customRightArrow={""}
+            autoPlaySpeed={3500}
             >
             <div className="item" onMouseEnter={() => setIsShownBackend(true)}  onMouseLeave={() => setIsShownBackend(false)}>
                     {isShownBackend ? <SquareSvg isopen={isShownBackend} skills={["Python","Django","FastApi"]}/> : <SvgIcon percentage="80"/>}

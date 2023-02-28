@@ -88,27 +88,6 @@ function SvgIcon ({percentage}) {
     </motion.svg>
         )
     }
-
-export const LmkJ =() =>{
-//     <div className="abc">
-//     <p>
-//         2018
-//     </p>
-//     <span className="bcd"></span>
-//     <p>
-//         2023
-//     </p>
-// </div>
-    return (
-
-<div id="line">
-    <div id="gray"></div>
-    <div id="red"></div>
-    <div id="black"></div>
-</div>
-
-    )
-}
     
     
     export default SvgIcon;
