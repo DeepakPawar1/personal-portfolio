@@ -9,6 +9,7 @@ import SvgIcon from "./SvgIcon";
 import {SquareSvg} from "./SvgIcon";
 import {useState} from 'react';
 import { FileX } from "react-bootstrap-icons";
+import useCheckMobileScreen from './MobileViewChecker';
 
 function Skills  () {
     const responsive = {
@@ -33,6 +34,9 @@ function Skills  () {
       const [isShown, setIsShown] = useState(false);
       const [isShownBackend, setIsShownBackend] = useState(false);
       const [isShownDevOps,setIsShownDevops] = useState(false);
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+
     return (<section>   
         <Container>
         <Row>
@@ -41,8 +45,38 @@ function Skills  () {
                 <h2>
                     Skills
                 </h2>
-                <p>Following is the skillset that I posses in my arsenal. I believe there is always an area for IMPROVEMENT.</p>
-            <Carousel responsive={responsive} infiite={true} className="skill-slider" >
+                <p>Following are the skills that I posses in my arsenal. I believe there is always an area for IMPROVEMENT.</p>
+            <Carousel responsive={responsive} infiite={true} className="skill-slider" infinite={useCheckMobileScreen()}  autoPlay={useCheckMobileScreen() !== false ? true : false}
+              beforeChange={(previousSlide, { currentSlide, onMove }) => {
+                console.log(previousSlide, currentSlide,"beforechange");
+                setIsShown(false)
+                setIsShownDevops(false)
+                setIsShownBackend(false)
+                }}
+              afterChange={async (previousSlide, { currentSlide, onMove }) => {
+                await sleep(2000)
+                setIsShown(true)
+                setIsShownDevops(true)
+                setIsShownBackend(true)
+                // if (currentSlide ===1){
+                //   await sleep(2000)
+                //   setIsShown(true)
+                // }
+                // if (currentSlide ===2){
+                //   await sleep(2000)
+                //   setIsShownDevops(true)
+                // }
+                // if (currentSlide ===0){
+                //   await sleep(2000)
+                //   setIsShownBackend(true)
+                // }
+              console.log(previousSlide, currentSlide,"afterchange");
+
+            }}
+            autoPlaySpeed={8000}
+            customLeftArrow={""}
+            customRightArrow={""}
+            >
             <div className="item" onMouseEnter={() => setIsShownBackend(true)}  onMouseLeave={() => setIsShownBackend(false)}>
                     {isShownBackend ? <SquareSvg isopen={isShownBackend} skills={["Python","Django","FastApi"]}/> : <SvgIcon percentage="80"/>}
                     <h5>Backend</h5>

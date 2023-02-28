@@ -547,7 +547,7 @@ border-radius: 55px 0px 0px 55px;
 }
 
 @media only screen and (max-width: 800px) {
-   .abracadabra {
+   .projectsClass {
       /* display: flex;
       flex-direction: column;
       justify-content: center; */
@@ -555,7 +555,7 @@ border-radius: 55px 0px 0px 55px;
        width: 90% !important;
       /*margin: 0 0 0 0; */
   } 
-  .abracadabra .item > a{
+  .projectsClass .item > a{
     /* /* background-color: rgb(5, 5, 5) !important; */
     /* width:370px !important; */ 
     font-size: 12px !important;
@@ -564,8 +564,14 @@ border-radius: 55px 0px 0px 55px;
 }
 
 @media only screen and (max-width: 437px) {
-.react-multiple-carousel__arrow--right {
+  .right.carousel-control, .left.carousel-control {
+    display: none;
+}
+/* .react-multiple-carousel__arrow--right {
   margin-right: -20px !important
+} */
+.react-multi-carousel-item--active{
+/* background-color: saddlebrown; */
 }
 .skill-bx{
   padding:60px 0px !important;
@@ -575,7 +581,7 @@ border-radius: 55px 0px 0px 55px;
   height:130px;
 }
 .squareSvg{
-  width:120px;
+  width:130px;
   height:130px;
 }
 }

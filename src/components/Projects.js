@@ -40,7 +40,7 @@ function Projects () {
         <h2>Projects</h2>
         <p style={{margin: "auto" }}>My work on professional projects is mostly in backend. Following are the details.</p>
         <Tab.Container id="projects-tabs" defaultActiveKey="first">
-        <Nav variant="pills"  defaultActiveKey="/home" className="abracadabra">
+        <Nav variant="pills"  defaultActiveKey="/home" className="projectsClass">
             <Nav.Item className="item">
               <Nav.Link eventKey="first"><div>ElasticRUN Pune</div>
              

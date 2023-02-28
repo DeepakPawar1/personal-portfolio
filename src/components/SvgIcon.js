@@ -1,6 +1,6 @@
 
 import {motion} from 'framer-motion';
-
+import useCheckMobileScreen from './MobileViewChecker';
 const svgVariants ={
     // hidden : {rotate : 0},
     visible:{
@@ -64,11 +64,15 @@ function SvgIcon ({percentage}) {
     }
 
     export const  SquareSvg = ( {isOpen,skills})=>{
+
+        const isMobile = useCheckMobileScreen();
         let yCoOrdinate = 10;
         const renderText = skills.map((skill,index)=>{
-            yCoOrdinate = yCoOrdinate +40;
-            return (<text x="40" y={yCoOrdinate.toString()} fill="white" key={skill}>{skill} </text> )
+            yCoOrdinate = yCoOrdinate + (isMobile ? 35 : 40)
+           const  xCoOrdinate = (isMobile ? 30 : 40)
+            return (<text x={xCoOrdinate.toString()} y={yCoOrdinate.toString()} fill="white" key={skill}>{skill} </text> )
         })
+        const pathstring = isMobile ? "M25,10 h80 a20,20 0 0 1 20,20 v80 a20,20 0 0 1 -20,20 h-80 a20,20 0 0 1 -20,-20 v-80 a20,20 0 0 1 20,-20 z" : "M25,10 h100 a20,20 0 0 1 20,20 v100 a20,20 0 0 1 -20,20 h-100 a20,20 0 0 1 -20,-20 v-100 a20,20 0 0 1 20,-20 z"
         return (
     
     <motion.svg width="150" height="160" className="squareSvg" variants={svgVariants} initial="hidden" animate="visible">
@@ -76,7 +80,7 @@ function SvgIcon ({percentage}) {
           <stop offset="0%"   stopColor="#AA367C"/>
           <stop offset="100%" stopColor="#4A2FBD"/>
         </linearGradient>
-        <motion.path d="M25,10 h100 a20,20 0 0 1 20,20 v100 a20,20 0 0 1 -20,20 h-100 a20,20 0 0 1 -20,-20 v-100 a20,20 0 0 1 20,-20 z" 
+        <motion.path d={pathstring}
         fill="#121212" 
         stroke="url(#gradient)"
         strokeWidth="3"  variants={pathVariants}/>
