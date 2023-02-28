@@ -42,29 +42,39 @@ function NavBar(){
                 {/* <img src={devsvg} alt="Logo"/> */}
                 <DevSvg/>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" >
-                <span className="navbar-toggler-icon"></span>
-                </Navbar.Toggle>
+            
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link' } onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
                 <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')} >Skills</Nav.Link>
                 <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}  onClick={()=> onUpdateActiveLink('projects')} >Projects</Nav.Link>
+                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}>
+                        <div className="social-icon">
+                            <a className="grow" href="https://api.whatsapp.com/send?phone=8180935220"><img src={whatsapp} alt="React Logo"/></a>
+                            <a className="grow" href="https://www.linkedin.com/in/deepak-pawar-566192140/"><img src={navIcon1} alt="React Logo"/></a>
+                            {/* <a className="grow" href="#insta"><img src={navIcon3} alt="React Logo"/></a>  */}
+                        </div>
+                </Nav.Link>
               </Nav>
-              <span className="navbar-text">
-                <div className="social-icon">
-                    <a className="grow" href="https://api.whatsapp.com/send?phone=8180935220"><img src={whatsapp} alt="React Logo"/></a>
-                    <a className="grow" href="https://www.linkedin.com/in/deepak-pawar-566192140/"><img src={navIcon1} alt="React Logo"/></a>
-                    {/* <a className="grow" href="#insta"><img src={navIcon3} alt="React Logo"/></a>  */}
-                
-                
-                </div>
-                <button className="vvd" onClick={()=>{ console.log('connect')}}> <span>Let's Connect</span></button>
-              </span>
+              
             </Navbar.Collapse>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" >
+                <span className="navbar-toggler-icon"></span>
+                </Navbar.Toggle>
           </Container>
         </Navbar>
       );
 }
 
 export default NavBar;
+
+
+{/* <span className="navbar-text">
+                
+                <div className="connection" onClick={()=>{ console.log('connect')}}> 
+                <div className="social-icon">
+                    <a className="grow" href="https://api.whatsapp.com/send?phone=8180935220"><img src={whatsapp} alt="React Logo"/></a>
+                    <a className="grow" href="https://www.linkedin.com/in/deepak-pawar-566192140/"><img src={navIcon1} alt="React Logo"/></a>
+                </div>
+                </div>
+              </span> */}

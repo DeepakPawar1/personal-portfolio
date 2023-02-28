@@ -7,7 +7,7 @@ import whatsapp from '../assets/img/whatsapp.svg';
 export const Footer =()=>{
 
     return (
-        <footer className="footer">
+        <footer className="footer" id="footer">
         <Container>
             <Row>
                 <Col sm={6} className={"text-center text-sm-end"}>

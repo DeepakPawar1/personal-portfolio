@@ -41,7 +41,7 @@ function Skills  () {
         <Container>
         <Row>
             <Col>
-            <div  className="skill-bx">
+            <div  className="skill-bx" id="skills">
                 <h2>
                     Skills
                 </h2>
