@@ -43,6 +43,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+.navbar{
+  position: sticky !important;
+  top:0;
+  z-index: 2;
+  background-color: #121212 !important;
+}
+
 .navbar-text.social-icon{
   display: flex;
   flex-direction: row;
@@ -138,6 +145,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 .navbar-light {
   background: #121212;
 }
+
 .social-icon a {
 margin-left: 20px;
 }
@@ -507,6 +515,14 @@ border-radius: 55px 0px 0px 55px;
 .Carousel{
   margin:20px;
 }
+.footer{
+  padding: 0 0 50px 0;
+  /* background-image: url('./assets/img/banner-bg.png') !important; */
+  background-color: black;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .App {
   text-align: center;
 }
@@ -588,6 +604,3 @@ border-radius: 55px 0px 0px 55px;
   margin-top: 4px;
 }
 }
-
-
-/*SkillSVG in svgIcon*/
