@@ -3,11 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 // import { Tab } from "bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png"
-import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import porjImg4 from "../assets/img/deliveryserv.png";
-import Carousel from 'react-bootstrap/Carousel'
 function Projects () {
     const projectErun = [
     {
@@ -36,9 +34,9 @@ function Projects () {
     return (<section className="project" id="projects">
 <Container>
     <Row>
-        <Col>
+        <Col className="projDetail">
         <h2>Projects</h2>
-        <p style={{marginLeft: "30px",textAlign:"left" }}>My work on professional projects is mostly in backend. Following are the details.</p>
+        <p >My work on professional projects is mostly in backend. Following are the details.</p>
         <Tab.Container id="projects-tabs" defaultActiveKey="first">
         <Nav variant="pills"  defaultActiveKey="/home" className="projectsClass">
             <Nav.Item className="item">

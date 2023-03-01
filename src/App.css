@@ -648,3 +648,30 @@ border-radius: 55px 0px 0px 55px;
   margin-top: 4px;
 }
 }
+.footercol {
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  width:100%;
+  padding-top:10px;
+  
+  
+}
+.footer .container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.projDetail > p{
+  color:#B8B8B8;
+  display:block;
+  font-size: 15px;
+  /* text-align: left; */
+  margin-left: 20px;
+  width:90%
+  
+}

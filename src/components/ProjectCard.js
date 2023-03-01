@@ -2,7 +2,7 @@
 import {Col} from "react-bootstrap";
 function ProjectCard ({title,description,imageUrl,projectItems}){
     const renderItem = projectItems.map((item,index)=>{
-        return <li>{item}</li>
+        return <li key={index}>{item}</li>
     })
     return (
         <div className="cardDiv">

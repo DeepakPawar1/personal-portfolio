@@ -1,14 +1,10 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {Container,Row,Col} from "react-bootstrap";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 import SvgIcon from "./SvgIcon";
 import {SquareSvg} from "./SvgIcon";
 import {useState} from 'react';
-import { FileX } from "react-bootstrap-icons";
 import useCheckMobileScreen from './MobileViewChecker';
 
 function Skills  () {
@@ -48,7 +44,7 @@ function Skills  () {
                 <p>Following are the skills that I posses in my arsenal. I believe there is always an area for IMPROVEMENT.</p>
             <Carousel responsive={responsive} infiite={true} className="skill-slider" infinite={useCheckMobileScreen()}  autoPlay={useCheckMobileScreen() !== false ? true : false}
               beforeChange={(previousSlide, { currentSlide, onMove }) => {
-                console.log(previousSlide, currentSlide,"beforechange");
+                // console.log(previousSlide, currentSlide,"beforechange");
                 setIsShown(false)
                 setIsShownDevops(false)
                 setIsShownBackend(false)
@@ -58,7 +54,7 @@ function Skills  () {
                 setIsShown(true)
                 setIsShownDevops(true)
                 setIsShownBackend(true)
-              console.log(previousSlide, currentSlide,"afterchange");
+              // console.log(previousSlide, currentSlide,"afterchange");
 
             }}
             autoPlaySpeed={3500}
